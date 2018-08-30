@@ -17,7 +17,7 @@
 # inherit from common trlte
 -include device/samsung/trlte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := trltexx,trltedt
+TARGET_OTA_ASSERT_DEVICE := trltexx,trltedt,trlte
 
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := apq8084_sec_trlte_eur_defconfig
@@ -26,8 +26,8 @@ TARGET_KERNEL_VARIANT_CONFIG := apq8084_sec_trlte_eur_defconfig
 TARGET_FIXUP_PREVIEW := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_trltexx
-TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_apq8084
+TARGET_LIBINIT_APQ8084_DEFINES_FILE := device/samsung/trltexx/init/init_trlte.cpp
 
 # inherit from the proprietary version
 -include vendor/samsung/trltexx/BoardConfigVendor.mk
